@@ -13,11 +13,12 @@ import 'package:flutter/material.dart';
 void main() {
 
   // Instantiate and run the application
-  runApp( RowApp01());
+  runApp( const RowApp01());
 }
 
 /// This class represents the app
 class RowApp01 extends StatelessWidget {
+  const RowApp01({super.key});
 
   /// This method builds the UI
   @override
@@ -30,13 +31,20 @@ class RowApp01 extends StatelessWidget {
 
         // AppBar definition
         appBar: AppBar(
-          title: Text("Row App 01"),
+          title: const Text(
+            "Row App 01",
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+          backgroundColor: Colors.pinkAccent[400]
         ),
 
         // Row definition
-        body: Row(
+        body: const Row(
 
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // This will create an even space between the children
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
 
           // Display content of row
           children: <Widget>[
